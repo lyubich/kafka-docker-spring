@@ -1,0 +1,34 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: '2.0.5.RELEASE'
+    }
+}
+
+plugins {
+    id "java"
+    id "idea"
+    id "org.springframework.boot" version "2.0.5.RELEASE"
+}
+
+group 'ru.alyubich.kafka-docker-spring'
+version '1.0-SNAPSHOT'
+
+jar {
+    baseName = 'kafka-docker-spring'
+    version = '1.0-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile(group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.5.RELEASE')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
